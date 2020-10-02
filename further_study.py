@@ -15,9 +15,10 @@ def custom_len(input_list):
         8
 
     """
-    
-    return len(input_list)
-
+    counter = 0 
+    for item in input_list:
+        counter = counter + 1 
+    return counter
 
 # For the next four exercises, you'll need to be clever and think about ways
 # to use list slice assignment.
@@ -43,9 +44,6 @@ def custom_append(input_list, value):
         True
 
     """
-    notes = notes + custom_append[1]
-
-    pass
 
 
 def custom_extend(input_list, second_list):
