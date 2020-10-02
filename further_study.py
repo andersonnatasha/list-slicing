@@ -43,7 +43,12 @@ def custom_append(input_list, value):
         >>> notes == ['Do', 'Re', 'Mi', 'Fa', 'So', 'La', 'Ti', 'Do', 'Re']
         True
 
+    a = input_list[1]
+    print(a)
+    
+
     """
+
 
 
 def custom_extend(input_list, second_list):
@@ -79,7 +84,7 @@ def custom_insert(input_list, index, value):
         True
 
     """
-
+    
     pass
 
 
