@@ -43,6 +43,7 @@ def custom_append(input_list, value):
         True
 
     """
+    notes = notes + custom_append[1]
 
     pass
 
