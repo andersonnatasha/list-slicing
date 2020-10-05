@@ -117,7 +117,10 @@ def custom_remove(input_list, value):
 
     """
 
-   
+    for item in range(len(input_list)):
+        if input_list[item] == value:
+           input_list[item:item+1] = [ ]
+           break
 
 
 def custom_pop(input_list):
@@ -136,8 +139,14 @@ def custom_pop(input_list):
 
     """
 
-    return None
-
+    for item in range(len(input_list)):
+        list_len = custom_len(input_list)
+        if input_list[item] == input_list[list_len -1]:
+            last = input_list[list_len - 1]
+            input_list[list_len - 1: list_len] = [ ]
+    return last
+        
+          
 
 def custom_index(input_list, value):
     """Return the index of the first item of value found in input_list.
@@ -151,8 +160,12 @@ def custom_index(input_list, value):
         1
 
     """
+    for item in range(len(input_list)):
+        if input_list[item] == value:
+            return item
+            break
 
-    return 0
+
 
 
 def custom_count(input_list, value):
@@ -167,8 +180,12 @@ def custom_count(input_list, value):
         2
 
     """
-
-    return 0
+    counter = 0 
+    for item in input_list:
+        if item == value:
+            counter += 1
+    return counter
+  
 
 
 def custom_reverse(input_list):
@@ -186,6 +203,17 @@ def custom_reverse(input_list):
         True
 
     """
+
+    input_list[::-1]
+    
+
+    #list_len = len(input_list) - 1
+    #reversed_list = [ ]
+    #for item in input_list:
+    #    reversed_list.append(input_list[list_len])
+    #    list_len = list_len - 1
+    #input_list = reversed_list
+    #print(input_list)
 
     pass
 
@@ -206,6 +234,9 @@ def custom_contains(input_list, value):
         True
 
     """
+    for item in input_list:
+        return value == item
+            
 
     return None
 
