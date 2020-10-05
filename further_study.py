@@ -17,7 +17,7 @@ def custom_len(input_list):
     """
     counter = 0 
     for item in input_list:
-        counter = counter + 1 
+        counter +=  1 
     return counter
 
 # For the next four exercises, you'll need to be clever and think about ways
@@ -43,14 +43,14 @@ def custom_append(input_list, value):
         >>> notes == ['Do', 'Re', 'Mi', 'Fa', 'So', 'La', 'Ti', 'Do', 'Re']
         True
 
-    a = input_list[1]
-    print(a)
-    
-
     """
-
-
-
+    # allows appending if you do not know how many elements are in the list
+    
+    insert = input_list[-1]
+    input_list[-1:] = [value]
+    input_list[-1:-1] = [insert]
+    
+    
 def custom_extend(input_list, second_list):
     """Append every item in second_list to input_list.
 
@@ -66,8 +66,21 @@ def custom_extend(input_list, second_list):
         True
 
     """
+    
+    length_of_input_list = custom_len(input_list)
+    for item in range(len(second_list)):
+        input_list[length_of_input_list:length_of_input_list] = [second_list[item]]
+        length_of_input_list += 1
+        
+    
+    # alternativley:
+    #for item in range(len(second_list)):
+    #    custom_append(input_list, second_list[item])
+    #
+    # alternativley: 
+    # input_list[3:] = [second_list[0], second_list[1]]
 
-    pass
+
 
 
 def custom_insert(input_list, index, value):
@@ -85,7 +98,7 @@ def custom_insert(input_list, index, value):
 
     """
     
-    pass
+    input_list[index:index] = [value]
 
 
 def custom_remove(input_list, value):
@@ -104,7 +117,7 @@ def custom_remove(input_list, value):
 
     """
 
-    pass
+   
 
 
 def custom_pop(input_list):
