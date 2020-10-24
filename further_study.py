@@ -234,9 +234,15 @@ def custom_contains(input_list, value):
         True
 
     """
-    for item in input_list:
-        return value == item
-            
+    specific_value = []
+    for item in range(len(input_list)):
+        if item == value: 
+            specific_value.append(item)
+            specific_value.append(value)
+            return specific_value[0] == specific_value[1]
+        else: 
+            return False
+        
 
     return None
 
@@ -256,6 +262,12 @@ def custom_equality(some_list, another_list):
         False
 
     """
+    len_list1 = len(some_list)
+    len_list2 = len(another_list)
+
+    for item in range(len(some_list)):
+        for item2 in range(len(another_list)):
+            return some_list[item] == another_list[item2]
 
     return None
 
