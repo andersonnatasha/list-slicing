@@ -23,8 +23,7 @@ def tail(input_list):
     ['Feb', 'Mar']
 
     """
-    a1 = input_list[1:]
-    return a1
+    return input_list[1:]
 
 
 def last(input_list):
@@ -36,9 +35,7 @@ def last(input_list):
     'Mar'
 
     """
-    a1 = input_list[-1]
-
-    return a1
+    return input_list[-1]
 
 
 def top(input_list):
@@ -49,10 +46,9 @@ def top(input_list):
     >>> top(['Jan', 'Feb', 'Mar'])
     ['Jan', 'Feb']
 
-    """
-    a1 = input_list[:-1]
 
-    return a1
+    """
+    return input_list[:-1]
 
 
 def first_three(input_list):
@@ -62,12 +58,10 @@ def first_three(input_list):
 
     >>> first_three(['Jan', 'Feb', 'Mar', 'Apr', 'May'])
     ['Jan', 'Feb', 'Mar']
-
     """
-    a1 = input_list[0:3]
-    return a1
+    return input_list[:3]
 
- 
+
 def last_five(input_list):
     """Return the last five elements of the input list.
 
@@ -77,9 +71,8 @@ def last_five(input_list):
     [15, 18, 21, 24, 27]
 
     """
-    a1 = input_list[-5:]
-    return a1
- 
+    return input_list[-5:]
+
 
 def middle(input_list):
     """Return all elements of input_list except the first two and the last two.
@@ -90,8 +83,7 @@ def middle(input_list):
     [6, 9, 12, 15, 18, 21]
 
     """
-    a1 = input_list[2:-2]
-    return a1
+    return input_list[2:-2]
 
 
 def inner_four(input_list):
@@ -101,11 +93,8 @@ def inner_four(input_list):
 
     >>> inner_four([0, 3, 6, 9, 12, 15, 18, 21, 24, 27])
     [6, 9, 12, 15]
-
     """
-    a1 = input_list[2:6]
-
-    return a1
+    return input_list[2:6]
 
 
 def inner_four_end(input_list):
@@ -119,9 +108,10 @@ def inner_four_end(input_list):
     >>> inner_four_end([0, 3, 6, 9, 12, 15, 18, 21, 24, 27])
     [12, 15, 18, 21]
 
+
     """
-    a1 = input_list[4:8]
-    return a1
+
+    return input_list[-6:-2]
 
 
 def replace_head(input_list):
@@ -136,8 +126,6 @@ def replace_head(input_list):
 
     """
     input_list[0] = 42
-    pass 
-
 
 
 def replace_third_and_last(input_list):
@@ -153,7 +141,6 @@ def replace_third_and_last(input_list):
     """
     input_list[2] = 37
     input_list[-1] = 37
-    pass
 
 
 def replace_middle(input_list):
@@ -171,25 +158,26 @@ def replace_middle(input_list):
     True
 
     """
-    input_list[2:-2] = 42,37
-
-    pass
+    input_list[2:-2] = [42, 37]
 
 
 def delete_third_and_seventh(input_list):
     """Remove third and seventh elements of input_list and return nothing.
 
     For example:
-
+                #0      1      2    3      4    5      6    7
     >>> notes = ['Do', 'Re', 'Mi', 'Fa', 'So', 'La', 'Ti', 'Do']
     >>> delete_third_and_seventh(notes)
     >>> notes == ['Do', 'Re', 'Fa', 'So', 'La', 'Do']
     True
 
     """
-    del input_list[2]
-    del input_list[5]
-    pass 
+    input_list[2:3] = []
+    input_list[5:6] = []
+
+    # del input_list[2]
+    # del input_list[5]
+
 
 def delete_middle(input_list):
     """Remove all elements from input_list except the first two and last two.
@@ -203,9 +191,11 @@ def delete_middle(input_list):
     >>> notes == ['Do', 'Re', 'Ti', 'Do']
     True
 
+
+
     """
-    del input_list[2:-2]
-    pass
+    input_list[2:-2] = []
+    # del input_list[2:-2]
 
 
 # This is the part were we actually run the doctests.
